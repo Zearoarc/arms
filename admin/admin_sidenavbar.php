@@ -23,7 +23,13 @@
                 <span>Home</span>
             </a>
         </li>
-        <li>
+        <?
+        if (strpos($url, 'dashboard') !== false) {
+            echo '<li class="active">';
+        } else {
+            echo '<li>';
+        }
+        ?>
             <a href="dashboard.php">
                 <i class='bx bxs-dashboard' style='color:#ffffff'></i>
                 <span>Dashboard</span>
